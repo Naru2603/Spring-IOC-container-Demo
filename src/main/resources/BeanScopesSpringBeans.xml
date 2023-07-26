@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- using byName property -->
+	<bean id="car1" class="com.prowings.beanscopes.Car" scope="singleton">
+		<property name="model" value="2010"></property>
+		<property name="company" value="Hyundai"></property>
+		<property name="type" value="Sedan"></property>
+	</bean>
+
+	<bean id="car2" class="com.prowings.beanscopes.Car" scope="prototype">
+		<property name="model" value="2015"></property>
+		<property name="company" value="Audi"></property>
+		<property name="type" value="SUV"></property>
+	</bean>
+</beans>

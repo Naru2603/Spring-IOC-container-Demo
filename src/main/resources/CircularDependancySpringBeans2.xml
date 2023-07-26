@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- using setter property -->
+	<bean id="person2" class="com.prowings.circulardependancy.Person2" depends-on="addr2">
+		<constructor-arg name="age" value="54"/>
+		<constructor-arg name="name" value="Rishi"/>
+		<constructor-arg ref="address">
+		</constructor-arg>
+	</bean>
+
+<bean id="addr2" class="com.prowings.circulardependancy.Address2" ">
+		<constructor-arg name="city" value="Kolhapur"/>
+		<constructor-arg name="Country" value="Rishi"/>
+		<constructor-arg ref="person">
+		</constructor-arg>
+	</bean>
+</beans>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- using byName property -->
+	<bean id="std1" class="com.prowings.autowiring.Student" autowire="constructor">
+		<property name="rollNo" value="85"></property>
+		<property name="name" value="Suresh"></property>
+	</bean>
+
+	<!-- 	using byName property -->
+
+
+	<bean id="addr" class="com.prowings.autowiring.Address" >
+		<property name="pin" value="74596"></property>
+		<property name="city" value="Pune"></property>
+		<property name="country" value="India"></property>
+	</bean>
+	
+
+	<!-- using byType property -->
+
+
+	<bean id="address" class="com.prowings.autowiring.Address">
+		<property name="pin" value="3256"></property>
+		<property name="city" value="Mumbai"></property>
+		<property name="country" value="India"></property>
+	</bean>
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- using byName property -->
+	<bean id="fourWheeler" class="com.prowings.beanscopes.FourWheeler" scope="singleton">
+		<property name="model" value="2010"></property>
+		<property name="company" value="Hyundai"></property>
+		<property name="type" value="Sedan"></property>
+		<lookup-method name = "getEngine" bean = "engine"/>
+	</bean>
+
+	<bean id="engine" class="com.prowings.beanscopes.Engine" scope="prototype">
+		<property name="capacity" value="2"></property>
+		<property name="type" value="V12"></property>
+		<property name="powerHp" value="2000"></property>
+	</bean>
+</beans>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- using setter property -->
+	<bean id="std1" name="stud1" class="com.prowings.models.Student">
+		<property name="rollNo" value="85"></property>
+		<property name="name" value="Suresh"></property>
+		<property name="address">
+
+			<ref bean="addr" />
+		</property>
+	</bean>
+
+	<!-- using Constructor Arg -->
+
+	<bean id="std2" class="com.prowings.models.Student">
+		<constructor-arg name="rollNo" value="123" />
+		<constructor-arg name="name" value="Basavraj" />
+		<constructor-arg name="address">
+			<ref bean="addr2" />
+		</constructor-arg>
+	</bean>
+
+	<!-- using index property -->
+
+	<bean id="emp1" class="com.prowings.models.Employee">
+		<constructor-arg value="97" index="0" />
+		<constructor-arg value="Rishi" index="1" />
+		<constructor-arg value="Mechanical" index="2" />
+	</bean>
+
+	<bean id="addr" class="com.prowings.models.Address">
+		<property name="pin" value="1423"></property>
+		<property name="city" value="Pune"></property>
+	</bean>
+
+	<bean id="addr2" class="com.prowings.models.Address">
+		<property name="pin" value="416203"></property>
+		<property name="city" value="Mumbai"></property>
+	</bean>
+</beans>

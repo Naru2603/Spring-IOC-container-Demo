@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- using Constructor-setter mix properties-->
+
+	<bean id="lapppy" class="com.prowings.models.Laptop">
+		<constructor-arg name="processor" value="Intel" />
+		<constructor-arg name="graphicsCard" value="NVIDIA" />
+		<property name="ram" value="16"/>
+	</bean>
+</beans>
