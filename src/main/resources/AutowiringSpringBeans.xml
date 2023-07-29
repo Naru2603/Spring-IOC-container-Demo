@@ -5,7 +5,7 @@
  http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- using byName property -->
-	<bean id="std1" class="com.prowings.autowiring.Student" autowire="constructor">
+	<bean id="std1" class="com.prowings.autowiring.Student" autowire="byType">
 		<property name="rollNo" value="85"></property>
 		<property name="name" value="Suresh"></property>
 	</bean>
@@ -13,7 +13,7 @@
 	<!-- 	using byName property -->
 
 
-	<bean id="addr" class="com.prowings.autowiring.Address" >
+	<bean id="addr" class="com.prowings.autowiring.Address"  primary= "true">
 		<property name="pin" value="74596"></property>
 		<property name="city" value="Pune"></property>
 		<property name="country" value="India"></property>

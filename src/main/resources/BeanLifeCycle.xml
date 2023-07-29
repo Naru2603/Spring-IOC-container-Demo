@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- using Iterfaces -->
+	<bean id="std1" class="com.prowings.beanlifecycle.Student"
+		autowire="byType">
+		<property name="rollNo" value="85"></property>
+		<property name="name" value="Suresh"></property>
+	</bean>
+
+	<!-- using Iterfaces -->
+
+
+	<bean id="addr" class="com.prowings.beanlifecycle.Address">
+		<property name="pin" value="74596"></property>
+		<property name="city" value="Pune"></property>
+	</bean>
+
+<!-- using custom init and destroy methods -->
+
+<!-- 	<bean id="std2" class="com.prowings.beanlifecycle.Student2"	autowire="byType" init-method="customInit" destroy-method="customDestroy">
+		<property name="rollNo" value="96"></property>
+		<property name="name" value="Ramesh"></property>
+	</bean> -->
+
+
+<!-- using custom init and destroy methods -->
+
+
+<!-- 	<bean id="address2" class="com.prowings.beanlifecycle.Address2" init-method="customInit" destroy-method="customDestroy">
+		<property name="pin" value="841233"></property>
+		<property name="city" value="mumbai"></property>
+	</bean> -->
+
+</beans>

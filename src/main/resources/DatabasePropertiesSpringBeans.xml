@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="db.properties" />
+	</bean>
+	<!-- using byName property -->
+	<bean id="dbDetails"
+		class="com.prowings.proprtyclass.MyDatabaseDetails">
+		<property name="userName" value="${dbusername}"></property>
+		<property name="url" value="${dburl}"></property>
+		<property name="password" value="${dbpassword}"></property>
+	</bean>
+
+	
+</beans>
